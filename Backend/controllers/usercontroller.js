@@ -85,7 +85,8 @@ const token= await jwt.sign(tokendata,'sajhghjcgjsdckug',{expiresIn:'3d'});
 }
 }
 export const logout=async(req,res)=>{
-  return  res.status(200).cookie("token","",{expireIn:new Date(Date.now()),httpOnly:true}).json({
+
+return  res.status(200).cookie("token","",{expireIn:new Date(Date.now()),httpOnly:true}).json({
         message:"User Logout succesfully",
         success:false
     })
