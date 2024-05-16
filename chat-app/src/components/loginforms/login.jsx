@@ -36,7 +36,7 @@ const Login = () => {
     if(signUp){
     try {
       axios.defaults.withCredentials=true;
-      const res= await axios.post('http://localhost:8080/api/v1/user/register',user,{
+      const res= await axios.post('https://chat-application-r2bx.onrender.com/api/v1/user/register',user,{
        headers:{
          "Content-type":'application/json'
        },withCredentials:true
@@ -58,7 +58,7 @@ const Login = () => {
     const password=user.password;
     try {
       axios.defaults.withCredentials=true;
-      const res= await axios.post('http://localhost:8080/api/v1/user/login',{userId,password},{
+      const res= await axios.post('https://chat-application-r2bx.onrender.com/api/v1/user/login',{userId,password},{
        headers:{
          "Content-type":'application/json'
        },withCredentials:true
