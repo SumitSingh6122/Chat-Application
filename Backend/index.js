@@ -13,7 +13,7 @@ dotenv.config({
 });
 ConnectionDB();
 app.use(bodyParser.urlencoded({extended:true}));
-
+const port = process.env.PORT || 4000;
 app.use(express.json());
 app.use(cookieParser());
 const corsOption={
@@ -23,6 +23,6 @@ const corsOption={
 app.use(cros(corsOption));
 app.use('/api/v1/user',userRoute);
 app.use('/api/v1/message',messageRouter)
-server.listen(process.env.PORT,()=>{
-console.log(`Server is running on Port ${process.env.PORT}`);
+server.listen(port,()=>{
+console.log(`Server is running on Port ${port}`);
 });
