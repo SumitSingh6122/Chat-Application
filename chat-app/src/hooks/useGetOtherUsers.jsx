@@ -16,7 +16,7 @@ const useGetOtherUsers = () => {
             'Content-Type': 'application/json'
 
         };
-                const res = await axios.get(`http://localhost:8080/api/v1/user`,{
+                const res = await axios.get(`https://chat-application-r2bx.onrender.com/api/v1/user`,{
                   headers: headers,
             withCredentials: true
                 });
