@@ -27,7 +27,7 @@ const {socket}=useSelector(store=>store.Socket);
   useEffect(()=>{
     
     if(AuthenthecatedUser){
-      const socketio = io('https://chat-application-three-green.vercel.app',{
+      const socketio = io('https://chat-application-r2bx.onrender.com',{
           query:{
             userId:AuthenthecatedUser._id
           }
