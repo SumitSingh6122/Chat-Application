@@ -12,7 +12,7 @@ useEffect(()=>{
     const featchMessage=async()=>{
         try {
           axios.defaults.withCredentials=true;
-          const res=await axios.get(`http://localhost:8080/api/v1/message/${ClickUser?._id}`);
+          const res=await axios.get(`https://chat-application-r2bx.onrender.com/api/v1/message/${ClickUser?._id}`);
            dispatch(setgetmessage(res.data));
         
         } catch (error) {
