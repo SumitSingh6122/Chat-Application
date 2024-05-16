@@ -72,7 +72,7 @@ const tokendata={
 }
 const token= await jwt.sign(tokendata,'sajhghjcgjsdckug',{expiresIn:'3d'});
 
-   return res.status(200).cookie("token",token,{maxAge:1*24*60*60*100}).json({
+   return res.status(200).cookie("token",token,{maxAge:1*24*60*60*100, httpOnly: true, secure: true }).json({
     _id:user._id,
     Fullname:user.Fullname,
     userId:user.userId,
