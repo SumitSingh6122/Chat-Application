@@ -9,17 +9,10 @@ const useGetOtherUsers = () => {
     useEffect(() => {
         const fetchOtherUsers = async () => {
             try {
-                axios.defaults.withCredentials = true;
-                 const token = 'sgscdgjsfvsjsk'; 
-        const headers = {
-            'Authorization': `Bearer ${token}`,
-            'Content-Type': 'application/json'
-
-        };
-                const res = await axios.get(`https://chat-application-r2bx.onrender.com/api/v1/user`,{
-                  headers: headers,
-            withCredentials: true
-                });
+                 axios.defaults.withCredentials = true;
+                const res = await axios.get(`https://chat-application-r2bx.onrender.com/api/v1/user`);
+                //
+                console.log("other users -> ",res);
                 dispatch(setOthers(res.data));
             } catch (error) {
                 if (error.response) {
