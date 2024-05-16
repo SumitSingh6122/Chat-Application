@@ -15,7 +15,7 @@ const useGetRealTimeMessage = () => {
     socket?.off("newMessage");
 
   }
- },[getmessage,dispatch,socket])
+ },[getmessage,dispatch])
 
 
 }
