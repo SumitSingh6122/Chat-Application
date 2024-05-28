@@ -22,7 +22,7 @@ useEffect(()=>{
     
 featchMessage();
   
-},[ClickUser,dispatch]);
+},[ClickUser?._id,setgetmessage]);
 }
 
 export default useGetMessage;
