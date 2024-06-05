@@ -9,7 +9,7 @@ body {
     position: fixed;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+   
   }
   .cover-box{
       height:35rem;
@@ -239,5 +239,74 @@ body {
   }
  
  
+
+@media (max-width: 480px){
+  .cover-box{
+    width: 100vw;
+   height: 100vh;
+    margin-top: 0;
+    flex-direction: column;
+    overflow: auto;
+   
+  }
+body{
+  height:100vh;
+}
+  .otherusers-box{
+    width: 22em;
+    position: absolute;
+    top:80px;
+    }
+
   
+  .form .inputt{
+width: 20rem;
+margin-top: 30px;
+  }
+  .search-btn i{
+  margin-left: 78px;
+  margin-top:26px;
+  }
+  .img{
+    width: 22rem;
+    margin-left: 20px;
+    margin-top: -30px;
+    position: relative;
+    
+  }
+  .div-img h1{
+    margin-left: 40px;
+  }
+  .div-img h2{
+    margin-left: 40px;
+  }
+  .logout{
+    position:fixed;
+    top:0;
+    right: 10px;
+    margin-top: 10px;
+  }
+  .message-profile{
+    width: 22.5rem;
+    position: relative;
+    background-color: red;
+    margin-left: 20px;
+  
+   
+  }
+  .chat-input{
+    position: absolute;
+  bottom:20px;
+  }
+  .chat-input .chat-in{
+    background-color: aqua;
+  width: 20rem;
+
+  margin-left:-10px;
+
+  }
+form{
+border:none;
+}
+}
  
