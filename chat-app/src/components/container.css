@@ -289,7 +289,7 @@ margin-top: 30px;
   .message-profile{
     width: 22.5rem;
     position: relative;
-    background-color: red;
+  
     margin-left: 20px;
   
    
@@ -299,14 +299,12 @@ margin-top: 30px;
   bottom:20px;
   }
   .chat-input .chat-in{
-    background-color: aqua;
+    
   width: 20rem;
 
   margin-left:-10px;
 
   }
-form{
-border:none;
-}
+
 }
  
