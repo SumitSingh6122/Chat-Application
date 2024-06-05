@@ -126,3 +126,36 @@ p:hover{
   z-index: 100;
   top: 10px;
 }
+@media (max-width: 480px) {
+  .container{
+  position:absolute;
+  left: 0;
+  top:50px;
+  }
+  .input-container input{
+    width: 20rem;
+  }
+  .bttn .button{
+    width: 20rem;
+  }
+  p{
+    white-space: nowrap;
+  }
+  h1{
+    text-align: center;
+    margin-left: 120px;
+    margin-bottom: 10px;
+    white-space: nowrap;
+  }
+  form{
+    width: 23.5rem;
+  
+    top: 0;
+    height:80vh;
+    padding-top:-10px;
+    margin-top:10px;
+
+    
+    margin-left: 10px;
+  }
+}
