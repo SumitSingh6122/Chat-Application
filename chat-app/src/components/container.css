@@ -21,6 +21,9 @@ body {
   
      
   }
+  .arrow{
+    display: none;
+  }
   .box{
     width: 20vw;
   }
@@ -72,6 +75,8 @@ body {
   img {
     height: 100%;
     width: 100%;
+    
+     
     border-radius: 50%;
   }
   
@@ -235,6 +240,7 @@ body {
     color:white;
     padding: 5px 10px;
     border-radius: 5px;
+    position: relative;
     z-index: 100;
   }
  
@@ -249,6 +255,18 @@ body {
     overflow: auto;
    
   }
+.arrow{
+  font-size: 2rem;
+  left: -20px;
+  position: relative;
+  cursor: pointer;
+  display: block;
+}
+  .mobile-view{
+    margin-left: 20px;
+    margin-top: -33px;
+    
+  } 
 body{
   height:100vh;
 }
@@ -256,6 +274,7 @@ body{
     width: 22em;
     position: absolute;
     top:80px;
+    z-index: 10;
     }
 
   
@@ -269,7 +288,7 @@ margin-top: 30px;
   }
   .img{
     width: 22rem;
-    margin-left: 20px;
+    margin-left: 80px;
     margin-top: -30px;
     position: relative;
     
@@ -287,24 +306,26 @@ margin-top: 30px;
     margin-top: 10px;
   }
   .message-profile{
-    width: 22.5rem;
-    position: relative;
-  
+    width: 22rem;
+    position: absolute;
     margin-left: 20px;
-  
-   
+    margin-top: 100px;
+   z-index: 100;
+   display: none; 
   }
   .chat-input{
     position: absolute;
   bottom:20px;
   }
   .chat-input .chat-in{
-    
+   
   width: 20rem;
 
   margin-left:-10px;
 
   }
-
+form{
+border:none;
+}
 }
  
