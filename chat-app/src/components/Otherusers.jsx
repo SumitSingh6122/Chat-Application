@@ -8,6 +8,7 @@ const Otherusers = ({user}) => {
   const dispatch=useDispatch();
   const handleclick=(user)=>{
      dispatch(setClickUser(user));
+     document.getElementById("3").style.display="block";
   }
   return (
     <div>
