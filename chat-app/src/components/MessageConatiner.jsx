@@ -13,7 +13,7 @@ const MessageConatiner = () => {
   return (
     <>
     {
-      ClickUser?(  <div className='message-profile'>
+      ClickUser?(  <div className='message-profile'  id='3'>
       <ActiveChat/>
      
       <Message/>
