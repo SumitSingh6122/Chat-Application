@@ -14,7 +14,7 @@ const Otherusers = ({user}) => {
     <div>
         <div onClick={()=>handleclick(user)} className={`profile-container ${ClickUser?._id !== user?._id ? 'bg-blue-200':'bt'}`} >
         <div className='icon-container'>
-  <img src={user.profilePhoto} alt=''/>
+  <img src={user?.profilePhoto} alt=''/>
   <div className={ `status-circle  ${ isOnline ? 'online-user':''}`}>
   <span>{user?.Fullname }</span>
   </div>
