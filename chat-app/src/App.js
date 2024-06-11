@@ -29,7 +29,7 @@ const {socket}=useSelector(store=>store.Socket);
     if(AuthenthecatedUser){
       const socketio = io('https://chat-application-r2bx.onrender.com',{
           query:{
-            userId:AuthenthecatedUser._id
+            userId:AuthenthecatedUser?._id
           }
       });
       dispatch(setsocket(socketio));
@@ -45,7 +45,7 @@ const {socket}=useSelector(store=>store.Socket);
       }
     }
 
-  },[AuthenthecatedUser]);
+  },[AuthenthecatedUser?]);
 
   return (
     <div className="App">
