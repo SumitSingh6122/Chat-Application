@@ -1,26 +1,28 @@
-import { useDispatch, useSelector } from 'react-redux';
 import OtherusersConatiner from './OtherusersConatiner';
 import './container.css';
-import { useState } from 'react';
-import { setOthers } from '../redux/userSlice';
-import toast from 'react-hot-toast';
+import { useEffect, useState } from 'react';
+
 
 
 
 const SearchBar = () => {
   
   const [search,setsearch]=useState('');
+  const [debouncedSearch, setDebouncedSearch] = useState(search);
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      setDebouncedSearch(search);
+    }, 300); 
 
-  const {Others}=useSelector(store=>store.Users)
-  const dispatch=useDispatch();
+    return () => {
+      clearTimeout(handler);
+    };
+  }, [search]);
+ 
+  
 const hansdleSearch=(e)=>{
 e.preventDefault();
-if(Others){
-const searchUser=Others?.find((user)=>user?.Fullname.toLowerCase().includes(search.toLowerCase()));
-dispatch(setOthers([searchUser]));
-}else{
-  toast.error('users not Found !!');
-}
+
 
 }
   return (
@@ -30,7 +32,7 @@ dispatch(setOthers([searchUser]));
     <button  className='search-btn'  type='submit'><i class='bx bx-search'></i></button>
    </form>
       <div className='otherusers-box'>
-        <OtherusersConatiner/>
+        <OtherusersConatiner  search={debouncedSearch} />
       </div>
       
     </div>
