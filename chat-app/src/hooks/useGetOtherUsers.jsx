@@ -5,7 +5,7 @@ import { setOthers } from '../redux/userSlice';
 
 const useGetOtherUsers = () => {
     const dispatch = useDispatch();
-        const {AuthenthecatedUser}=useSelector(store=>store.Users);
+        
 
     useEffect(() => {
         const fetchOtherUsers = async () => {
