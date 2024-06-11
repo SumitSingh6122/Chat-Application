@@ -45,7 +45,7 @@ const {socket}=useSelector(store=>store.Socket);
       }
     }
 
-  },[AuthenthecatedUser?]);
+  },[AuthenthecatedUser]);
 
   return (
     <div className="App">
